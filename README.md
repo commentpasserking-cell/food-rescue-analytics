@@ -14,9 +14,7 @@ python run_pipeline.py           # optional: runs everything in the terminal
 streamlit run app.py             # opens the dashboard in the browser
 ```
 
-## Using your real data
-In the app choose **Upload my data** and upload either one Excel workbook (sheets named like
-*Donors, Donations, NGOs, Claims*) or separate CSV files with those names. Or run
+##  run
 `python run_pipeline.py path/to/your_file.xlsx`.
 
 Only the **Donations** table is required, with a date column and a quantity column. Other columns
@@ -24,7 +22,7 @@ Only the **Donations** table is required, with a date column and a quantity colu
 If your column names differ, add them to `ALIASES` in `config.py`. If your data uses other words
 for wasted food, add them to `WASTE_WORDS`.
 
-**Wastage rule (change if your data defines it differently):** a donation counts as wasted if its status
+**Wastage rule:** a donation counts as wasted if its status
 says so, its delivery failed or expired, or it was never claimed.
 
 ## Files and project modules
@@ -39,7 +37,7 @@ says so, its delivery failed or expired, or it was never claimed.
 | `run_pipeline.py` | 8. Evaluation (MAE, RMSE, MAPE, precision, recall, F1, ROC-AUC) |
 
 ## Important notes
-* The sample data is **simulated**. Never present its results as real findings.
+* The sample data is **simulated**. 
 * Models are tested on the most recent 20% of days, never on shuffled data (time-based split).
 * A model is only worth reporting if it beats the baselines; the app tells you when it does not.
 * Real donation data is usually noisy; forecast errors (especially MAPE) can be large for small categories.
