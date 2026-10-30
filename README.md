@@ -19,7 +19,7 @@ streamlit run app.py             # opens the dashboard in the browser
 
 Only the **Donations** table is required, with a date column and a quantity column. Other columns
 (food category, donor type, prepared/expiry time, claims, NGOs) make the results better.
-If your column names differ, add them to `ALIASES` in `config.py`. If your data uses other words
+If your column names differ, add them to `ALIASES` in `config.py`. If data uses other words
 for wasted food, add them to `WASTE_WORDS`.
 
 **Wastage rule:** a donation counts as wasted if its status
